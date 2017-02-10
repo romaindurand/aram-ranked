@@ -11,7 +11,7 @@ Use npm or yarn to install the package
 
 ## Usage
 ```javascript
-const AramRanked = require('./aram-ranked')
+const AramRanked = require('aram-ranked')
 const euwClient = new AramRanked('euw')
 
 logUser('kupluss warwick')
