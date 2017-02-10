@@ -1,0 +1,33 @@
+{
+  "name": "aram-ranked",
+  "version": "0.0.1",
+  "description": "A javascript API for http://www[dot]aram-ranked[dot]info",
+  "main": "aram-ranked.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "standard && ava tests/*"
+  },
+  "keywords": [
+    "aram",
+    "ranked",
+    "lol"
+  ],
+  "author": "@romaindurand",
+  "license": "ISC",
+  "dependencies": {
+    "domino": "^1.0.28",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "zepto-node": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "standard": "^8.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/romaindurand/aram-ranked.git"
+  }
+}
