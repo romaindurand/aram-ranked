@@ -9,6 +9,11 @@
   "scripts": {
     "test": "standard && ava tests/*"
   },
+  "dist": {
+    "shasum": "a220ae211d9f50f3804acc0e7bb975d417390a4f",
+    "tarball": "https://registry.npmjs.org/aram-ranked/-/aram-ranked-0.1.0.tgz"
+  },
+  "homepage": "https://github.com/romaindurand/aram-ranked#readme",
   "keywords": [
     "aram",
     "ranked",
