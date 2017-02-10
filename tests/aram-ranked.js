@@ -26,8 +26,8 @@ test('aramRanked.getTotalUsers', async t => {
   t.false(isNaN(parsedTotal))
 })
 
-test('aramRanked.getRankingFromUser', async t => {
-  const userRanking = await aramRanked.getRankingFromUser(user)
+test('user.getRanking', async t => {
+  const userRanking = await user.getRanking()
   t.true(typeof userRanking === 'string')
   const parsedRanking = parseInt(userRanking, 10)
   t.false(isNaN(parsedRanking))
