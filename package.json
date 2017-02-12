@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "standard && ava tests/*"
+    "test": "standard && ava -v tests/*"
   },
   "dist": {
     "shasum": "a220ae211d9f50f3804acc0e7bb975d417390a4f",

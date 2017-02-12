@@ -26,9 +26,6 @@ test('aramRanked.getTotalUsers', async t => {
   t.false(isNaN(parsedTotal))
 })
 
-test('user.getRanking', async t => {
-  const userRanking = await user.getRanking()
-  t.true(typeof userRanking === 'string')
-  const parsedRanking = parseInt(userRanking, 10)
-  t.false(isNaN(parsedRanking))
+test('constructor should throw with no server provided', async t => {
+  await t.throws(() => new AramRanked())
 })

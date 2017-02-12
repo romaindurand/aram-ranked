@@ -1,5 +1,6 @@
 const User = require('./lib/User')
 const parsing = require('./lib/parsing')
+const core = require('./lib/core')
 const request = require('request-promise')
 const {TotalUsersNotFoundError} = require('./lib/errors')
 
@@ -13,23 +14,11 @@ class AramRanked {
   }
 
   static getServers () {
-    return {
-      euw: 'EU West',
-      na: 'North America',
-      kr: 'Korea',
-      eune: 'EU North&amp;East',
-      ja: 'Japan',
-      ru: 'Russia',
-      tr: 'Turky',
-      br: 'Brazil',
-      oce: 'Oceania',
-      las: 'LAS',
-      lan: 'LAN'
-    }
+    return core.servers
   }
 
   getTotalUsers () {
-    return request(this.rankingUrl).then((html) => {
+    return request(this.rankingUrl).then(html => {
       const totalUsers = parsing.extractTotalUsers(html)
       if (!totalUsers) throw new TotalUsersNotFoundError()
       return totalUsers
