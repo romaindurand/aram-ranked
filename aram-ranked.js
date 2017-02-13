@@ -30,4 +30,4 @@ class AramRanked {
   }
 }
 
-module.exports = AramRanked
+module.exports = {AramRanked, User}
