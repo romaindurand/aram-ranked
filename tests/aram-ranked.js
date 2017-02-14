@@ -1,5 +1,5 @@
 import test from 'ava'
-import AramRanked from '../aram-ranked'
+import {AramRanked} from '../aram-ranked'
 let aramRanked, user
 
 test.before('Creating euw aram-ranked client', t => {
@@ -8,6 +8,7 @@ test.before('Creating euw aram-ranked client', t => {
 
 test.serial('aramRanked.getUserByName', async t => {
   user = await aramRanked.getUserByName('kupluss warwick')
+  t.truthy(typeof +user.ranking === 'number')
   t.is(user.isNew, false)
 })
 
